@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo-oracle-11
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: c##doantrungkien
+    password: doantrungkien123
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
